@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>org.freedesktop.dbus-session</string>
+
+	<key>ServiceIPC</key>
+	<true/>
+
+	<!-- Please uncomment on 10.4; OnDemand doesn't work properly there. -->
+	<!--
+	<key>OnDemand</key>
+	<false />
+	-->
+
+	<key>ProgramArguments</key>
+	<array>
+		<string>/opt/concourse/worker/volumes/live/5a7e9597-01bc-4db1-64a9-fd9856d2bd10/volume/dbus_1602701047784/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_/bin/dbus-daemon</string>
+		<string>--nofork</string>
+		<string>--session</string>
+	</array>
+
+	<key>Sockets</key>
+	<dict>
+		<key>unix_domain_listener</key>
+		<dict>
+			<key>SecureSocketWithKey</key>
+			<string>DBUS_LAUNCHD_SESSION_BUS_SOCKET</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
