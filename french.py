@@ -1,0 +1,28 @@
+from tkinter import *
+from tkinter import messagebox
+root = Tk()
+root.title("CATS")
+root.geometry("1000x1000")
+root.resizable(width=True,height=True)
+root.configure(bg="snow")
+root.grid_columnconfigure(0,minsize = 50)
+root.grid_rowconfigure(1,minsize = 50)
+frame1 = Frame(root,width="250",height = "1000",bg = "blue")
+frame1.pack(side = LEFT)
+frame3 = Frame(root,width="250",height = "1000",background = "red")
+frame3.pack(side = LEFT)
+frame2 = Frame(root,width="250",height = "1000",bg = "snow")
+frame2.pack(side = LEFT)
+frame4 = Frame(root,width="250",height = "1000",background = "yellow")
+frame4.pack(side = LEFT)
+button1 = Button(frame4,text = "BUTTON",width = "10",height= "10")
+button1.place(x = 10,y = 10)
+button2 = Label(frame3,text = "BUTTON")
+button2.place(x = 10,y = 10)
+button3 = Entry(frame1,text = "BUTTON",relief=SUNKEN)
+button3.place(x = 10,y = 10)
+button4 = Label(frame2,text = "BUTTON")
+button4.place(x = 10,y = 10)
+
+
+root.mainloop()
