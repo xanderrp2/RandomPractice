@@ -1,0 +1,30 @@
+from tkinter import *
+from tkinter import messagebox
+root = Tk()
+root.title("CATS")
+root.geometry("1000x1000")
+root.resizable(width=True,height=True)
+root.configure(bg="black")
+root.grid_columnconfigure(0,minsize = 50)
+root.grid_rowconfigure(1,minsize = 50)
+a = IntVar()
+b = StringVar()
+def check():
+    q = str(a.get())
+    if q == "1":
+        b.set("correct")
+    if q == "2" or q == "3":
+        b.set("inncorect")
+lable1 = Label(root,text = "which is the best animal type")
+lable1.pack()
+lable2 = Label(root,textvariable = b)
+lable2.pack()
+radio2 = Radiobutton(root,text = "dogs",variable = a,value = 1)
+radio2.pack()
+radio3 = Radiobutton(root,text = "cats",variable = a,value = 2)
+radio3.pack()
+radio4 = Radiobutton(root,text = "birds",variable = a,value = 3)
+radio4.pack()
+button = Button(root,text = "check",command = check)
+button.pack()
+root.mainloop()
